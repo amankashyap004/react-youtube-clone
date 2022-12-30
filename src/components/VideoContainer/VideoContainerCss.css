@@ -1,0 +1,120 @@
+.video-container-section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 290px;
+   border-radius: 1rem;
+   background-color: black;
+   margin-bottom: 1rem;
+   cursor: pointer;
+}
+
+.video-container-section-hover {
+   background-color: #111111;
+   transform: scale(1.1);
+   transition: all ease 0.5s;
+   z-index: 1;
+}
+
+.video-container-image {
+   width: 290px;
+   position: relative;
+}
+
+.video-container-img {
+   width: 100%;
+   border-radius: 0.9rem 0.9rem 0 0;
+}
+
+.video-container-timer {
+   background-color: rgba(0, 0, 0, 0.712);
+   width: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 4px;
+   padding: 0.2rem 0.1rem;
+   position: absolute;
+   bottom: 0.5rem;
+   right: 0.3rem;
+}
+
+.video-container-timer-text {
+   color: #ffffff;
+   font-size: 0.9em;
+   font-weight: 500;
+}
+
+.video-container-details {
+   display: flex;
+   justify-content: center;
+   margin: 0.5rem 0;
+}
+
+.video-container-details-padding {
+   padding: 0 .5rem;
+}
+
+.video-container-details-left {
+}
+
+.video-container-details-right {
+   margin-left: 1rem;
+}
+
+.video-container-details-title {
+   color: white;
+   font-size: 1em;
+}
+
+.video-container-details-channel-name {
+   color: #aaaaaa;
+   font-size: 0.8em;
+   margin: 0.5rem 0;
+}
+
+.video-container-details-more-details {
+   color: #aaaaaa;
+   font-size: 0.8em;
+}
+
+.video-container-details-more-icon {
+   color: white;
+   display: none;
+}
+
+.video-container-details-more-icon-display{
+   color: white;
+   display: block;
+}
+
+
+.video-container-more-container {
+   margin: 0.5rem 0;
+   width: 90%;
+}
+
+.display-none {
+   display: none;
+}
+
+.video-container-more {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #212121;
+   padding: 0.5rem 0.8rem;
+   margin: 1rem 0;
+   border-radius: 2rem;
+   color: #ffffff;
+   cursor: pointer;
+}
+
+.video-container-more:hover {
+   background-color: #313131;
+}
+
+.video-container-more-text {
+   margin-left: 0.5rem;
+}

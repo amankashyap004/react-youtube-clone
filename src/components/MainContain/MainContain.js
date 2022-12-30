@@ -1,10 +1,11 @@
 import React from "react";
-import VideoContainer from "./VideoContainer";
+import VideoContainer from "../VideoContainer/VideoContainer";
+import MainContainCss from  "./MainContainCss.css"
 
-export default function MainContain(){
-    return(
-        <section className="main-container">
-            <div className="main-contain">
+export default function MainContain() {
+   return (
+      <section className="main-container">
+         <div className="main-contain">
             <VideoContainer />
             <VideoContainer />
             <VideoContainer />
@@ -13,26 +14,17 @@ export default function MainContain(){
             <VideoContainer />
             <VideoContainer />
             <VideoContainer />
-            </div>
-            <div className="main-hr"></div>
-            <h4 className="extra-text">Trending</h4>
-            <div className="main-contain">
+         </div>
+         <div className="main-hr"></div>
+         <h4 className="extra-text">Trending</h4>
+         <div className="main-contain">
             <VideoContainer />
             <VideoContainer />
             <VideoContainer />
             <VideoContainer />
-            </div>
-            <div className="main-hr"></div>
-            <div className="main-contain">
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
+         </div>
+         <div className="main-hr"></div>
+         <div className="main-contain">
             <VideoContainer />
             <VideoContainer />
             <VideoContainer />
@@ -46,7 +38,16 @@ export default function MainContain(){
             <VideoContainer />
             <VideoContainer />
             <VideoContainer />
-            </div>
-        </section>
-    )
+            <VideoContainer />
+            <VideoContainer />
+            <VideoContainer />
+            <VideoContainer />
+            <VideoContainer />
+            <VideoContainer />
+            <VideoContainer />
+            <VideoContainer />
+            <VideoContainer />
+         </div>
+      </section>
+   );
 }

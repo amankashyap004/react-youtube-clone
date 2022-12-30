@@ -1,0 +1,78 @@
+.sidebar-hr {
+   background-color: #212121;
+   height: 1px;
+   margin: 1rem 0;
+}
+
+.sidebar-section {
+   display: flex;
+   flex-direction: column;
+}
+
+.sidebar {
+   background-color: #000000;
+   width: 15vw;
+   color: white;
+   scroll-behavior: smooth;
+   overflow-y: hidden;
+   overflow-x: hidden;
+}
+
+.sidebar:hover {
+   overflow-y: scroll;
+}
+
+.sidebar-icon-container {
+}
+
+.sidebar-contain {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding: 1rem;
+   padding-left: 1.2rem;
+   cursor: pointer;
+}
+
+.sidebar-contain:hover {
+   background-color: #212121;
+}
+
+.sidebar-text {
+   margin-left: 2rem;
+   font-weight: 500;
+   color: white;
+}
+
+.explore-text {
+   margin-top: 1rem;
+   margin-left: 1.3rem;
+   margin-bottom: 0.3rem;
+}
+
+.youtube-shorts-icon {
+   height: 24px;
+}
+
+/* Show More Function */
+.show-more{
+   display: none;
+}
+
+/* Copyright Section */
+
+.copyright-section {
+   margin: 0 1.5rem;
+}
+
+.copyright-para {
+   margin: 1rem 0;
+   font-size: 0.9em;
+   color: #aaa;
+}
+
+.copyright-text {
+   color: #717171;
+   font-size: 0.8em;
+   margin-bottom: 1rem;
+}

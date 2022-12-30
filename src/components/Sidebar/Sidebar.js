@@ -1,10 +1,19 @@
 import React from "react";
+import SidebarCss from "./SidebarCss.css";
 
-export default function Sidebar() {
-  
+export default function Sidebar(props) {
+   const [isActive, setISActive] = React.useState(false);
+   const [isArrow, setIsArrow] = React.useState(false);
+   const [showText, setShowText] = React.useState(false);
+   const showMore = () => {
+      setISActive(!isActive);
+      setIsArrow(!isArrow);
+      setShowText(!showText);
+   };
+
    return (
       <aside className="sidebar">
-         <section className="sidebar-top">
+         <section className="sidebar-section">
             <div className="sidebar-contain">
                <span className="material-symbols-outlined icon">home</span>
                <p className="sidebar-text">Home</p>
@@ -23,7 +32,8 @@ export default function Sidebar() {
             </div>
          </section>
          <div className="sidebar-hr"></div>
-         <section className="sidebar-top">
+
+         <section className="sidebar-section">
             <div className="sidebar-contain">
                <span className="material-symbols-outlined icon">video_library</span>
                <p className="sidebar-text">Library</p>
@@ -44,14 +54,31 @@ export default function Sidebar() {
                <span className="material-symbols-outlined">timer</span>
                <p className="sidebar-text">Watch Later</p>
             </div>
-            <div className="sidebar-contain">
-               <span className="material-symbols-outlined">expand_more</span>
-               <p className="sidebar-text">Show More</p>
+            {/* Show More Function */}
+            <section className={isActive ? "sidebar-section" : "show-more"}>
+               <div className="sidebar-contain">
+                  <span className="material-symbols-outlined icon">thumb_up</span>
+                  <p className="sidebar-text">Like</p>
+               </div>
+               <div className="sidebar-contain">
+                  <span className="material-symbols-outlined icon">playlist_play</span>
+                  <p className="sidebar-text">Your Playlist</p>
+               </div>
+               <div className="sidebar-contain">
+                  <span className="material-symbols-outlined">youtube_activity</span>
+                  <p className="sidebar-text">Your Activity</p>
+               </div>
+            </section>
+            <div className="sidebar-contain" onClick={showMore}>
+               <span className="material-symbols-outlined">
+                  {isArrow ? "expand_less" : "expand_more"}
+               </span>
+               <p className="sidebar-text">{showText ? "Show Fewer" : "Show More"}</p>
             </div>
          </section>
          <div className="sidebar-hr"></div>
 
-         <section className="sidebar-top">
+         <section className="sidebar-section">
             <p className="sidebar-text explore-text">Explore</p>
             <div className="sidebar-contain">
                <span className="material-symbols-outlined icon">local_fire_department</span>
@@ -72,7 +99,7 @@ export default function Sidebar() {
          </section>
          <div className="sidebar-hr"></div>
 
-         <section className="sidebar-top">
+         <section className="sidebar-section">
             <div className="sidebar-contain">
                <span className="material-symbols-outlined icon">settings</span>
                <p className="sidebar-text">Settings</p>
@@ -91,6 +118,7 @@ export default function Sidebar() {
             </div>
          </section>
          <div className="sidebar-hr"></div>
+
          <section className="copyright-section">
             <p className="copyright-para">
                About Press Copyright Contact us Creator Advertise Developers
