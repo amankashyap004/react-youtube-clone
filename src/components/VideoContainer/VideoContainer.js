@@ -1,5 +1,5 @@
 import React from "react";
-import VideoContainerCss from "./VideoContainerCss.css";
+import "./VideoContainer.css";
 
 export default function VideoContainer() {
    const [isActive, setISActive] = React.useState(false);

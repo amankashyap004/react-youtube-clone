@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryBarCss from "./CategoryBarCss.css"
+import "./CategoryBar.css"
 
 export default function CategoryBar(props) {
 

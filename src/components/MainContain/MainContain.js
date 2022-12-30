@@ -1,6 +1,6 @@
 import React from "react";
 import VideoContainer from "../VideoContainer/VideoContainer";
-import MainContainCss from  "./MainContainCss.css"
+import "./MainContain.css"
 
 export default function MainContain() {
    return (
@@ -33,20 +33,7 @@ export default function MainContain() {
             <VideoContainer />
             <VideoContainer />
             <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
-            <VideoContainer />
+            
          </div>
       </section>
    );
