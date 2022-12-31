@@ -8,8 +8,13 @@
     overflow-y: scroll;
  } */
  
- .main-contain {
+ /* .main-contain {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+ } */
+
+ .demo{
+   display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
  }
  

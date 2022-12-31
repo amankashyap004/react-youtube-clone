@@ -1,7 +1,7 @@
 import React from "react";
 import "./VideoContainer.css";
 
-export default function VideoContainer() {
+export default function VideoContainer(props) {
    const [isActive, setISActive] = React.useState(false);
    const onHover = () => {
       setISActive(!isActive);
