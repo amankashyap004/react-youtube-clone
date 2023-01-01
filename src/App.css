@@ -35,6 +35,10 @@ a {
   width: 85vw;
   /* position:absolute; */
   position: relative;
+  padding: 1rem 2rem;
+  overflow-y: scroll;
+    height: 90vh;
+    /* background-color: whitesmoke; */
 
 }
 

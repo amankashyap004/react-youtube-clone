@@ -1,0 +1,87 @@
+.youtube-search-video-container-details {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   margin: 0.5rem 1rem;
+   color: #ffffff;
+   width: 60vw;
+}
+
+.youtube-search-video-container-details-padding {
+   padding: 0 0.5rem;
+}
+
+.youtube-search-video-container-details-left {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.youtube-search-video-container-details-title {
+   color: white;
+   font-size: 1em;
+}
+
+.youtube-search-video-container-details-more-details {
+   color: #aaaaaa;
+   font-size: 0.8em;
+   margin-top: 0.5rem;
+}
+
+.youtube-search-video-container-details-channel-section {
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   margin: 0.6rem 0;
+}
+
+.youtube-search-video-container-details-channel-icon {
+   padding: 0.2rem;
+   border-radius: 50%;
+   cursor: pointer;
+   background-color: #303030;
+   color: wheat;
+   margin-right: 0.5rem;
+}
+
+.youtube-search-video-container-details-channel-name {
+   color: #aaaaaa;
+   font-size: 0.9em;
+   font-weight: 500;
+   margin: 0.5rem 0;
+   cursor: pointer;
+}
+
+.youtube-search-video-container-details-channel-name:hover {
+   color: #ffffff;
+}
+
+.youtube-search-video-container-details-discretion {
+   color: #aaaaaa;
+   margin-top: 0.5rem;
+}
+
+.youtube-search-video-container-details-discretion-text {
+   font-size: 0.8em;
+}
+
+.youtube-search-video-container-details-right {
+   margin-left: 2rem;
+   color: white; 
+   position: relative;
+}
+
+/* .youtube-search-video-container-details:hover::before {
+   font-family: "Font Awesome 5 Free";
+   content: "\f142";
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   position: absolute;
+   font-weight: 900;
+   right: 5rem;
+   margin-top: 0.1rem;
+} */
+

@@ -1,0 +1,38 @@
+.YoutubeSearchSection{
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.youtube-search-section-filters{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    padding: .4rem 1rem;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.youtube-search-section-filters:hover{
+    background-color: #212121;
+}
+
+.margin-top-zero{
+    margin-top: 0 !important;
+}
+
+.youtube-search-section-filters-text{
+    margin-left: .5rem;
+    font-size: 1em;
+}
+
+.youtube-search-video-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+

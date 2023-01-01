@@ -1,15 +1,14 @@
 import React from "react";
-import "./VideoContainer.css";
+import "./YoutubeSearch";
 
-export default function YoutubeAPI() {
+export default function YoutubeSearchVideoContain() {
    const [isActive, setISActive] = React.useState(false);
    const onHover = () => {
       setISActive(!isActive);
    };
 
    let youtubeAPIKey = "AIzaSyAKXbF82Gl3DlGJBRpysQfyEOPA58KtQ00";
-   let videoHTTP = "https://www.googleapis.com/youtube/v3/videos?";
-   let channelsHTTP = "https://www.googleapis.com/youtube/v3/channels";
+   let videoHTTP = "https://www.googleapis.com/youtube/v3/search?";
 
    let fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=IN`;
    const [apiAllData, setApiAllData] = React.useState([]);
@@ -74,7 +73,7 @@ export default function YoutubeAPI() {
                         <div className="video-container-details-more-details">
                            <p>
                               {item.statistics.viewCount} views • {item.snippet.publishedAt}
-                              {/* {console.log(item.statistics.viewCount)} */}
+                              {console.log(item.statistics.viewCount)}
                            </p>
                         </div>
                      </div>

@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import CategoryBar from "./components/CategoryBar/CategoryBar";
 import MainContain from "./components/MainContain/MainContain";
 import dataOfCategoryBar from "./components/CategoryBar/dataOfCategoryBar";
+import YoutubeSearch from "./components/YoutubeSearch/YoutubeSearch";
 import "./App.css";
 
 function App() {
@@ -17,8 +18,11 @@ function App() {
          <div className="full-body">
             <Sidebar />
             <div className="main-body">
-               <section className="category-bar-section">{categoryBarContain}</section>
-               <MainContain />
+               {/* <section className="category-bar-section">{categoryBarContain}</section>
+               <MainContain /> */}
+               <div className="searchPage">
+                  <YoutubeSearch/>
+               </div>
             </div>
          </div>
       </div>
