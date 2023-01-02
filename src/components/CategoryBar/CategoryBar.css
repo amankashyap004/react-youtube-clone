@@ -1,5 +1,7 @@
+.category-bar-container{
+}
+
 .category-bar-section {
-   margin: 0 2rem;
    display: flex;
    justify-content: flex-start;
    align-items: center;
@@ -10,7 +12,7 @@
    content: "";
    position: absolute;
    left: 0.8rem;
-   top: 2rem;
+   top: 2.5rem;
    display: block;
    border-left: 2px solid #ffffff;
    border-top: 2px solid #ffffff;
@@ -23,7 +25,7 @@
    content: "";
    position: absolute;
    right: 1rem;
-   top: 2rem;
+   top: 2.5rem;
    margin-right: 0.5rem;
    display: block;
    border-right: 2px solid #ffffff;
@@ -36,7 +38,7 @@
 
 .category-bar {
    background-color: black;
-   padding: 1rem 0;
+   padding: .5rem 0;
 }
 
 .category-bar-section::-webkit-scrollbar {

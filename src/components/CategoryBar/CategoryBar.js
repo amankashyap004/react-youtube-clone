@@ -1,23 +1,18 @@
 import React from "react";
-import "./CategoryBar.css"
+import dataOfCategoryBar from "./dataOfCategoryBar";
+import CategoryBarSection from "./CategoryBarSection";
+import "./CategoryBar.css";
 
-export default function CategoryBar(props) {
+export default function CategoryBar(){
 
-   const [isActive, setISActive] = React.useState(true);
-   const ToggleClass = () => {
-      setISActive(!isActive);
-   };
-   
+    const categoryBarContain = dataOfCategoryBar.map((item) => {
+        return <CategoryBarSection key={item.category} {...item} />;
+     });
 
-   const categoryBarContain = [
-      <div
-         className={isActive ? "category-bar-contain" : "category-bar-contain-active"}
-         onClick={ToggleClass}
-         key={props.category}
-      >
-         <p className="category-bar-contain-text">{props.category}</p>
-      </div>,
-   ];
+    return(
+        <main className="category-bar-container">
+            <section className="category-bar-section">{categoryBarContain}</section>
 
-   return <section className="category-bar">{categoryBarContain}</section>;
+        </main>
+    )
 }

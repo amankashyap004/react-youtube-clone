@@ -1,0 +1,17 @@
+.youtube-video-page-section{
+    width: 100vw;
+    padding: 1rem 4rem;
+    display: flex;
+    
+}
+
+.youtube-video-page-section-video{
+    width: 854px;
+    height: 480px;
+    width: 60vw;
+}
+
+.youtube-video-page-section-recommendation{
+    width: 20vw;
+    margin-left: 2rem;
+}

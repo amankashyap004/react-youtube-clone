@@ -14,27 +14,7 @@ export default function YoutubeSearch() {
          <section className="youtube-search-video-section">
             <YoutubeSearchVideoContainer />
             <YoutubeSearchVideoContainerDetails />
-         </section>
-         <section className="youtube-search-video-section">
-            <YoutubeSearchVideoContainer />
-            <YoutubeSearchVideoContainerDetails />
-         </section>
-         <section className="youtube-search-video-section">
-            <YoutubeSearchVideoContainer />
-            <YoutubeSearchVideoContainerDetails />
-         </section>
-         <section className="youtube-search-video-section">
-            <YoutubeSearchVideoContainer />
-            <YoutubeSearchVideoContainerDetails />
-         </section>
-         <section className="youtube-search-video-section">
-            <YoutubeSearchVideoContainer />
-            <YoutubeSearchVideoContainerDetails />
-         </section>
-         <section className="youtube-search-video-section">
-            <YoutubeSearchVideoContainer />
-            <YoutubeSearchVideoContainerDetails />
-         </section>
+         </section>      
       </section>
    );
 }
