@@ -24,6 +24,60 @@ a {
    background-color: #ababab;
 }
 
+.text-para-bold{
+   font-weight: 500;
+   font-size: 1em;
+}
+
+.text-para{
+   margin: .3rem 0;
+   font-size: 1em;
+}
+
+.text-para-small{
+   font-size: .8rem;
+   color: #797979;
+   font-weight: 500;
+   margin: .5rem 0;
+}
+
+
+.bg-btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #313131;
+   border-radius: 1.2rem;
+   padding: .5rem .8rem;
+   margin-right: .5rem;
+   cursor: pointer;
+}
+
+.bg-btn:hover{
+   background-color: #212121;
+
+}
+
+.bg-round{
+   border-radius: 50%;
+   padding: .5rem;
+}
+
+.icon-small{
+   font-size: 1.2rem;
+}
+
+.margin-right{
+   margin-right: .5rem;
+}
+
+.vertical-line{
+   height: 1.2rem;
+   width: 1px;
+   margin: 0 .5rem;
+   background-color: #797979;
+}
+
 .full-body {
    display: flex;
    height: calc(100vh - 4.7rem);
