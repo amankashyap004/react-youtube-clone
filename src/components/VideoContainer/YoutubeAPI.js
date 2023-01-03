@@ -7,9 +7,8 @@ export default function YoutubeAPI() {
       setISActive(!isActive);
    };
 
-   let youtubeAPIKey = "AIzaSyAKXbF82Gl3DlGJBRpysQfyEOPA58KtQ00";
+   let youtubeAPIKey = "AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE";
    let videoHTTP = "https://www.googleapis.com/youtube/v3/videos?";
-   let channelsHTTP = "https://www.googleapis.com/youtube/v3/channels";
 
    let fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=IN`;
    const [apiAllData, setApiAllData] = React.useState([]);
@@ -19,17 +18,15 @@ export default function YoutubeAPI() {
          .then((res) => res.json())
          .then((data) => {
             const result = data.items?.map((item) => ({
-                  
                ...item,
             }));
             setApiAllData(result);
          })
          .catch((err) => console.log(err));
-
    }, []);
    return (
       <div className="demo">
-         {apiAllData.map((item) => {
+         {apiAllData?.map((item) => {
             return (
                <section
                   className={
@@ -49,9 +46,7 @@ export default function YoutubeAPI() {
                         className="video-container-img"
                      />
                      <div className="video-container-timer">
-                        <p className="video-container-timer-text">
-                           {item.contentDetails.duration}
-                        </p>
+                        <p className="video-container-timer-text">{item.contentDetails.duration}</p>
                      </div>
                   </div>
                   <div

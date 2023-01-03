@@ -1,6 +1,5 @@
 import React from "react";
-import YoutubeSearchVideoContainer from "../YoutubeContainers/YoutubeSearchVideoContainer";
-import YoutubeSearchVideoContainerDetails from "../YoutubeContainers/YoutubeSearchVideoContainerDetails";
+import YoutubeSearchVideoContain from "./YoutubeSearchVideoContain"
 import "./YoutubeSearch.css";
 
 export default function YoutubeSearch() {
@@ -11,9 +10,8 @@ export default function YoutubeSearch() {
             <h5 className="youtube-search-section-filters-text">Filters</h5>
          </div>
          <div className="main-hr margin-top-zero"></div>
-         <section className="youtube-search-video-section">
-            <YoutubeSearchVideoContainer />
-            <YoutubeSearchVideoContainerDetails />
+         <section className="youtube-search-videos">
+            <YoutubeSearchVideoContain />
          </section>      
       </section>
    );

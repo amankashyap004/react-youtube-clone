@@ -8,6 +8,7 @@
 
 .youtube-search-video-container-image {
    width: 360px;
+   /* height: 180px; */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -16,6 +17,7 @@
 
 .youtube-search-video-container-img {
    width: 100%;
+   /* height: inherit; */
    border-radius: 0.5rem;
 }
 
@@ -27,7 +29,8 @@
    border-radius: 4px;
    padding: 0.1rem 0.3rem;
    position: absolute;
-   bottom: 0.5rem;
+   /* bottom: 0.5rem; */
+   bottom: 2.3rem;
    right: 0.4rem;
 }
 

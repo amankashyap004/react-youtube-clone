@@ -11,17 +11,17 @@ function App() {
    return (
       <div className="App">
          <Header />
-         {/* <div className="full-body">
+         <div className="full-body">
             <Sidebar />
             <div className="main-body">
-               <CategoryBar />
-               <MainContain />
+               {/* <CategoryBar />
+               <MainContain /> */}
                <div className="searchPage">
                   <YoutubeSearch />
                </div>
             </div>
-         </div> */}
-            <section className="youtube-video-page"><YoutubeVideoPage /></section>
+         </div>
+         {/* <section className="youtube-video-page"><YoutubeVideoPage /></section> */}
       </div>
    );
 }
