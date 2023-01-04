@@ -1,6 +1,7 @@
 import React from "react";
 import SidebarContain from "./SidebarContain";
 import "./Sidebar.css";
+import { Link } from "react-router-dom";
 
 export default function Sidebar(props) {
    const [isActive, setISActive] = React.useState(false);
@@ -15,16 +16,23 @@ export default function Sidebar(props) {
    return (
       <aside className="sidebar">
          <section className="sidebar-section">
-            <SidebarContain iconName="home" titleName="Home" />
-            <div className="sidebar-contain">
-               <img
-                  src="./images/youtube-shorts-icon.png"
-                  className="icon youtube-shorts-icon"
-                  alt="yt shorts"
-               />
-               <p className="sidebar-text">Shorts</p>
-            </div>
-            <SidebarContain iconName="subscriptions" titleName="Subscriptions" />
+            <Link to={"/"}>
+               <SidebarContain iconName="home" titleName="Home" />
+            </Link>
+            <Link to={"/search"}>
+               {" "}
+               <div className="sidebar-contain">
+                  <img
+                     src="./images/youtube-shorts-icon.png"
+                     className="icon youtube-shorts-icon"
+                     alt="yt shorts"
+                  />
+                  <p className="sidebar-text">Shorts</p>
+               </div>
+            </Link>
+            <Link to={"/video"}>
+               <SidebarContain iconName="subscriptions" titleName="Subscriptions" />
+            </Link>
          </section>
          <div className="sidebar-hr"></div>
 

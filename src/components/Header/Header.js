@@ -1,17 +1,18 @@
 import React from "react";
-import "./Header.css"
+import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
    return (
       <header className="header">
          <section className="header-section">
-            <div href="./" className="header-container">
+            <Link to="/" className="header-container">
                <span className="material-symbols-outlined icon">menu</span>
-               <a href="./" className="logo">
+               <div className="logo">
                   <img src="./images/youtube-icon.png" className="logo-img" alt="yt logo" />
                   <h3 className="logo-text">YouTube</h3>
-               </a>
-            </div>
+               </div>
+            </Link>
          </section>
          <section className="header-section">
             <div className="header-container search-bar-container">

@@ -1,8 +1,9 @@
 .YoutubeSearchSection {
-   /* display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column; */
+   width: 85vw;
+   position: relative;
+   padding: 0.5rem 1.5rem;
+   overflow-y: scroll;
+   height: 90vh;
 }
 
 .youtube-search-section-filters {

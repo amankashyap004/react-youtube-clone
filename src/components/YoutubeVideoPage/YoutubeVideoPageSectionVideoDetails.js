@@ -23,27 +23,31 @@ export default function YoutubeVideoPageSectionVideoDetails() {
                </section>
                <section className="youtube-video-page-section-video-details-container-top-right-container">
                   <div className="bg-btn">
-                     <span class="material-symbols-outlined icon-small margin-right">thumb_up</span>
+                     <span className="material-symbols-outlined icon-small margin-right">
+                        thumb_up
+                     </span>
                      <p>80K</p>
                      <div className="vertical-line"> </div>
-                     <span class="material-symbols-outlined icon-small">thumb_down</span>
+                     <span className="material-symbols-outlined icon-small">thumb_down</span>
                   </div>
                   <div className="bg-btn">
-                     <span class="material-symbols-outlined icon-small margin-right">share</span>
+                     <span className="material-symbols-outlined icon-small margin-right">
+                        share
+                     </span>
                      <p>Share</p>
                   </div>
                   <div className="bg-btn">
-                     <span class="material-symbols-outlined icon-small margin-right">cut</span>
+                     <span className="material-symbols-outlined icon-small margin-right">cut</span>
                      <p>Clip</p>
                   </div>
                   <div className="bg-btn">
-                     <span class="material-symbols-outlined icon-small margin-right">
+                     <span className="material-symbols-outlined icon-small margin-right">
                         docs_add_on
                      </span>
                      <p>Save</p>
                   </div>
                   <div className="bg-btn bg-round">
-                     <span class="material-symbols-outlined icon-small">more_horiz</span>
+                     <span className="material-symbols-outlined icon-small">more_horiz</span>
                   </div>
                </section>
             </section>
