@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 export default function YoutubeSearchVideoContain() {
    let { searchQuery } = useParams();
 
-   let youtubeAPIKey = "AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE";
+   let youtubeAPIKey = "AIzaSyDJYaKEW09xd_Lv-aaIW3KWD7BChl1-H2w";
    let videoHTTP = "https://www.googleapis.com/youtube/v3/search?";
 
    let fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet&q=${searchQuery}&type=video&safeSearch=none&maxResults=1`;
@@ -17,7 +17,6 @@ export default function YoutubeSearchVideoContain() {
          .then((res) => res.json())
          .then((data) => {
             const result = data.items?.map((item) => ({
-               key: data.items.videoId,
                ...item,
             }));
             setApiAllData(result);
