@@ -1,12 +1,15 @@
 import React from "react";
 import YoutubeSearchVideoContainer from "./YoutubeSearchVideoContainer";
 import YoutubeSearchVideoContainerDetails from "./YoutubeSearchVideoContainerDetails";
+import { useParams } from "react-router-dom";
 
 export default function YoutubeSearchVideoContain() {
+   let { searchQuery } = useParams();
+
    let youtubeAPIKey = "AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE";
    let videoHTTP = "https://www.googleapis.com/youtube/v3/search?";
 
-   let fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet&q=song&type=video&safeSearch=none&maxResults=1`;
+   let fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet&q=${searchQuery}&type=video&safeSearch=none&maxResults=1`;
    const [apiAllData, setApiAllData] = React.useState([]);
 
    React.useEffect(() => {
@@ -14,11 +17,10 @@ export default function YoutubeSearchVideoContain() {
          .then((res) => res.json())
          .then((data) => {
             const result = data.items?.map((item) => ({
-               key: data.items.id,
+               key: data.items.videoId,
                ...item,
             }));
             setApiAllData(result);
-            console.log(result);
          })
          .catch((err) => console.log(err));
    }, []);
@@ -28,7 +30,6 @@ export default function YoutubeSearchVideoContain() {
             return (
                <div className="youtube-search-video-section" key={item.id}>
                   <YoutubeSearchVideoContainer
-                     keyName={item.videoId}
                      image={item.snippet.thumbnails.high.url}
                      // videoDuration={item.contentDetails.duration}
                   />

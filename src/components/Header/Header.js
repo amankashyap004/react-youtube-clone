@@ -3,13 +3,15 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+   const [inputSearch, setInputSearch] = React.useState("");
+
    return (
       <header className="header">
          <section className="header-section">
             <Link to="/" className="header-container">
                <span className="material-symbols-outlined icon">menu</span>
                <div className="logo">
-                  <img src="./images/youtube-icon.png" className="logo-img" alt="yt logo" />
+                  <img src="/images/youtube-icon.png" className="logo-img" alt="yt logo" />
                   <h3 className="logo-text">YouTube</h3>
                </div>
             </Link>
@@ -17,11 +19,19 @@ export default function Header() {
          <section className="header-section">
             <div className="header-container search-bar-container">
                <div className="search-input">
-                  <input type="text" className="input" placeholder="Search" />
+                  <input
+                     type="text"
+                     className="input"
+                     placeholder="Search"
+                     onChange={(e) => setInputSearch(e.target.value)}
+                     value={inputSearch}
+                  />
                </div>
-               <button className="search-btn">
-                  <span className="material-symbols-outlined icon search-icon">search</span>
-               </button>
+               <Link to={`/search/${inputSearch}`}>
+                  <button className="search-btn">
+                     <span className="material-symbols-outlined icon search-icon">search</span>
+                  </button>
+               </Link>
                <div className="mic-container">
                   <span className="material-symbols-outlined icon ">mic</span>
                </div>

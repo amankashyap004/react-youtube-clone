@@ -19,17 +19,14 @@ export default function Sidebar(props) {
             <Link to={"/"}>
                <SidebarContain iconName="home" titleName="Home" />
             </Link>
-            <Link to={"/search"}>
-               {" "}
-               <div className="sidebar-contain">
-                  <img
-                     src="./images/youtube-shorts-icon.png"
-                     className="icon youtube-shorts-icon"
-                     alt="yt shorts"
-                  />
-                  <p className="sidebar-text">Shorts</p>
-               </div>
-            </Link>
+            <div className="sidebar-contain">
+               <img
+                  src="/images/youtube-shorts-icon.png"
+                  className="icon youtube-shorts-icon"
+                  alt="ytShorts"
+               />
+               <p className="sidebar-text">Shorts</p>
+            </div>
             <Link to={"/video"}>
                <SidebarContain iconName="subscriptions" titleName="Subscriptions" />
             </Link>

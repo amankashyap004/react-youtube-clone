@@ -44,13 +44,13 @@ function App() {
                }
             />
             <Route
-               path="/search"
+               path={`/search/:searchQuery`}
                element={
                   <div className="App">
                      <Header />
                      <div className="full-body">
                         <Sidebar />,
-                        <div className="searchPage">
+                        <div className="search-page">
                            <YoutubeSearch />
                         </div>
                      </div>
