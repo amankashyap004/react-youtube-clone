@@ -47,7 +47,11 @@ export default function YoutubeAPI() {
                         className="video-container-img"
                      />
                      <div className="video-container-timer">
-                        <p className="video-container-timer-text">{item.contentDetails.duration}</p>
+                        <p className="video-container-timer-text">
+                           {moment
+                              .utc(moment.duration(item.contentDetails.duration).asSeconds() * 1000)
+                              .format("mm:ss")}
+                        </p>
                      </div>
                   </div>
                   <div
