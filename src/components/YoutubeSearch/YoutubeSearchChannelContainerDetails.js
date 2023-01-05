@@ -12,8 +12,8 @@ export default function YoutubeSearchChannelContainerDetails(props) {
             </div>
             <div className="youtube-search-channel-container-details-more-details">
                <p className="text-para-small">@{props.channelChannelTitle}</p>
-               <p>&nbsp;•&nbsp;</p>
-               <p className="text-para-small">{props.publishedAt} subscribers</p>
+               <p className="text-para-small">&nbsp;•&nbsp;</p>
+               <p className="text-para-small">{"28M"} subscribers</p>
             </div>
             <div className="youtube-search-channel-container-details-discretion">
                <p className="youtube-search-channel-container-details-discretion-text">

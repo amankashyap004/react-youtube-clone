@@ -4,10 +4,13 @@
    display: flex;
 }
 
-.youtube-video-page-section-video {
+.youtube-video-page-video-contain-video {
    width: 854px;
    height: 480px;
    width: 60vw;
+}
+
+.youtube-video-page-video-container {
 }
 
 .youtube-video-page-section-video-details {
@@ -23,7 +26,7 @@
 }
 
 .youtube-video-page-section-video-details-container-top {
-    margin: .5rem 0;
+   margin: 0.5rem 0;
 }
 
 .youtube-video-page-section-video-details-container-top-video-title {
@@ -35,38 +38,35 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin: .5rem 0;
+   margin: 0.5rem 0;
 }
 
-.youtube-video-page-section-video-details-container-top-left-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.youtube-video-page-section-video-details-container-top-left-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .youtube-video-page-section-video-details-container-top-channel-icon {
-    background-color: #313131;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    margin-right: .5rem;
+   background-color: #313131;
+   border-radius: 50%;
+   height: 50px;
+   width: 50px;
+   margin-right: 0.5rem;
 }
 
 .youtube-video-page-section-video-details-container-top-channel-info {
-    margin: 0 .5rem;
+   margin: 0 0.5rem;
 }
 
-.youtube-video-page-section-video-details-container-top-subscribe
-{
-margin: 0 .5rem;
+.youtube-video-page-section-video-details-container-top-subscribe {
+   margin: 0 0.5rem;
 }
 
-
-
-.youtube-video-page-section-video-details-container-top-right-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.youtube-video-page-section-video-details-container-top-right-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .youtube-video-page-section-video-details-container-bottom {

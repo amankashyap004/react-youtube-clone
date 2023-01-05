@@ -1,5 +1,6 @@
 import React from "react";
 import "./VideoContainer.css";
+import moment from "moment";
 
 export default function YoutubeAPI() {
    const [isActive, setISActive] = React.useState(false);
@@ -68,7 +69,8 @@ export default function YoutubeAPI() {
                         </h5>
                         <div className="video-container-details-more-details">
                            <p>
-                              {item.statistics.viewCount} views • {item.snippet.publishedAt}
+                              {item.statistics.viewCount} views •{" "}
+                              {moment(`${item.snippet.publishedAt}`, "YYYYMMDD").fromNow()}
                               {/* {console.log(item.statistics.viewCount)} */}
                            </p>
                         </div>

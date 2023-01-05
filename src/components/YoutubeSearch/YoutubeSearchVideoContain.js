@@ -2,6 +2,7 @@ import React from "react";
 import YoutubeSearchVideoContainer from "./YoutubeSearchVideoContainer";
 import YoutubeSearchVideoContainerDetails from "./YoutubeSearchVideoContainerDetails";
 import { useParams } from "react-router-dom";
+import moment from "moment/moment";
 
 export default function YoutubeSearchVideoContain() {
    let { searchQuery } = useParams();
@@ -35,7 +36,7 @@ export default function YoutubeSearchVideoContain() {
                   <YoutubeSearchVideoContainerDetails
                      title={item.snippet.title}
                      // viewCount={item.statistics.viewCount}
-                     publishedAt={item.snippet.publishedAt}
+                     publishedAt={moment(`${item.snippet.publishedAt}`, "YYYYMMDD").fromNow()}
                      channelTitle={item.snippet.channelTitle}
                      description={item.snippet.description}
                   />

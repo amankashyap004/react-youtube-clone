@@ -1,5 +1,6 @@
 import React from "react";
 import "./YoutubeVideoPage.css";
+import YoutubeVideoPageVideoContain from "./YoutubeVideoPageVideoContain";
 import YoutubeRecommendationVideo from "../YoutubeRecommendationVideo/YoutubeRecommendationVideo";
 import YoutubeVideoPageSectionVideoDetails from "./YoutubeVideoPageSectionVideoDetails";
 
@@ -8,10 +9,10 @@ export default function YoutubeVideoPage() {
       <section className="youtube-video-page-section">
          <section className="youtube-video-page-section-video-container">
             <div className="youtube-video-page-section-video-section">
-               <video controls className="youtube-video-page-section-video"></video>
+               <YoutubeVideoPageVideoContain />
             </div>
             <div className="youtube-video-page-section-video-details">
-                <YoutubeVideoPageSectionVideoDetails />
+               <YoutubeVideoPageSectionVideoDetails />
             </div>
          </section>
          <div className="youtube-video-page-section-recommendation">
