@@ -1,18 +1,31 @@
 import React from "react";
 import dataOfCategoryBar from "./dataOfCategoryBar";
-import CategoryBarSection from "./CategoryBarSection";
 import "./CategoryBar.css";
 
-export default function CategoryBar(){
+export default function CategoryBar() {
+   const [selected, setSelected] = React.useState("All");
 
-    const categoryBarContain = dataOfCategoryBar.map((item) => {
-        return <CategoryBarSection key={item.category} {...item} />;
-     });
-
-    return(
-        <main className="category-bar-container">
-            <section className="category-bar-section">{categoryBarContain}</section>
-
-        </main>
-    )
+   return (
+      <div>
+         <main className="category-bar-container">
+            <section className="category-bar-section">
+               {dataOfCategoryBar.map((item, i) => {
+                  return (
+                     <div
+                        key={i}
+                        className={
+                           selected == item.category
+                              ? "category-bar-contain-active"
+                              : "category-bar-contain"
+                        }
+                        onClick={() => setSelected(item.category)}
+                     >
+                        <p className="category-bar-contain-text">{item.category}</p>
+                     </div>
+                  );
+               })}
+            </section>
+         </main>
+      </div>
+   );
 }
