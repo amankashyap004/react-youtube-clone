@@ -1,6 +1,7 @@
 import React from "react";
 import "./VideoContainer.css";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 export default function YoutubeAPI() {
    const [isActive, setISActive] = React.useState(false);
@@ -8,6 +9,9 @@ export default function YoutubeAPI() {
       setISActive(!isActive);
    };
 
+   // const onClickVideoPage = () => {
+   //    console.log(item.id);
+   // };
    let youtubeAPIKey = "AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE";
    let videoHTTP = "https://www.googleapis.com/youtube/v3/videos?";
 
@@ -22,12 +26,13 @@ export default function YoutubeAPI() {
                ...item,
             }));
             setApiAllData(result);
+            console.log(result);
          })
          .catch((err) => console.log(err));
    }, []);
    return (
       <div className="demo">
-         {apiAllData?.map((item) => {
+         {apiAllData.map((item) => {
             return (
                <section
                   className={
@@ -35,25 +40,29 @@ export default function YoutubeAPI() {
                         ? "video-container-section video-container-section-hover"
                         : "video-container-section"
                   }
-                  onClick={onHover}
+                  onDoubleClick={onHover}
+                  onClick={() => console.log(item.id)}
                   key={item.id}
                >
                   {/* { console.log(item.snippet.thumbnails.high.url)} */}
-
-                  <div className="video-container-image">
-                     <img
-                        src={item.snippet.thumbnails.high.url}
-                        alt="yt thumbnail"
-                        className="video-container-img"
-                     />
-                     <div className="video-container-timer">
-                        <p className="video-container-timer-text">
-                           {moment
-                              .utc(moment.duration(item.contentDetails.duration).asSeconds() * 1000)
-                              .format("mm:ss")}
-                        </p>
+                  <Link key={item.id} to={`/video/${item.id}`}>
+                     <div className="video-container-image">
+                        <img
+                           src={item.snippet.thumbnails.high.url}
+                           alt="yt thumbnail"
+                           className="video-container-img"
+                        />
+                        <div className="video-container-timer">
+                           <p className="video-container-timer-text">
+                              {moment
+                                 .utc(
+                                    moment.duration(item.contentDetails.duration).asSeconds() * 1000
+                                 )
+                                 .format("mm:ss")}
+                           </p>
+                        </div>
                      </div>
-                  </div>
+                  </Link>
                   <div
                      className={
                         isActive

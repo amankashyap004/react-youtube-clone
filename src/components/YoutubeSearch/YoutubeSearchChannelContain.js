@@ -6,7 +6,7 @@ import "./YoutubeSearchChannel.css";
 
 export default function YoutubeSearchChannelContain() {
    let { searchQuery } = useParams();
-
+   // console.log(searchQuery);
    let youtubeAPIKey = "AIzaSyDJYaKEW09xd_Lv-aaIW3KWD7BChl1-H2w";
    let videoHTTP = "https://www.googleapis.com/youtube/v3/search?";
 
@@ -24,7 +24,7 @@ export default function YoutubeSearchChannelContain() {
             console.log(result);
          })
          .catch((err) => console.log(err));
-   }, []);
+   }, [searchQuery]);
    return (
       <div>
          {apiAllData?.map((item) => {

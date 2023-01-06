@@ -58,7 +58,7 @@ function App() {
                }
             />
             <Route
-               path="/video"
+               path={`/video/:videoId`}
                element={
                   <div className="App">
                      <Header />

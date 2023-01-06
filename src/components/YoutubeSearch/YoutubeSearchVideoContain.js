@@ -10,7 +10,7 @@ export default function YoutubeSearchVideoContain() {
    let youtubeAPIKey = "AIzaSyDJYaKEW09xd_Lv-aaIW3KWD7BChl1-H2w";
    let videoHTTP = "https://www.googleapis.com/youtube/v3/search?";
 
-   let fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet&q=${searchQuery}&type=video&safeSearch=none&maxResults=1`;
+   let fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet&q=${searchQuery}&type=video&safeSearch=none&maxResults=8`;
    const [apiAllData, setApiAllData] = React.useState([]);
 
    React.useEffect(() => {
@@ -23,12 +23,12 @@ export default function YoutubeSearchVideoContain() {
             setApiAllData(result);
          })
          .catch((err) => console.log(err));
-   }, []);
+   }, [searchQuery]);
    return (
       <div>
-         {apiAllData?.map((item) => {
+         {apiAllData?.map((item, i) => {
             return (
-               <div className="youtube-search-video-section" key={item.id}>
+               <div className="youtube-search-video-section" key={i}>
                   <YoutubeSearchVideoContainer
                      image={item.snippet.thumbnails.high.url}
                      // videoDuration={item.contentDetails.duration}

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function YoutubeVideoPageSectionVideoDetails(props) {
    const [showMore, setShowMore] = React.useState(true);
-
+   const { video } = props;
    const showMoreFunc = () => {
       setShowMore(!showMore);
    };
@@ -11,18 +11,19 @@ export default function YoutubeVideoPageSectionVideoDetails(props) {
          <div className="youtube-video-page-section-video-details-container-top">
             <div className="youtube-video-page-section-video-details-container-top-tag">
                <p>
-                  #{props.tags[0].split(" ").join("")} #{props.tags[1].split(" ").join("")} #
-                  {props.tags[2].split(" ").join("")}
+                  #{video.snippet.tags[0].split(" ").join("")} #
+                  {video.snippet.tags[1].split(" ").join("")} #
+                  {video.snippet.tags[2].split(" ").join("")}
                </p>
             </div>
             <div className="youtube-video-page-section-video-details-container-top-video-title">
-               <h3>{props.title}</h3>
+               <h3>{video.snippet.title}</h3>
             </div>
             <section className="youtube-video-page-section-video-details-container-top-section">
                <section className="youtube-video-page-section-video-details-container-top-left-container">
                   <div className="youtube-video-page-section-video-details-container-top-channel-icon"></div>
                   <div className="youtube-video-page-section-video-details-container-top-channel-info">
-                     <p className="text-para-bold">{props.channelTitle}</p>
+                     <p className="text-para-bold">{props?.channelTitle}</p>
                      <p className="text-para-small">100M subscribers</p>
                   </div>
                   <div className="youtube-video-page-section-video-details-container-top-subscribe">
@@ -34,7 +35,7 @@ export default function YoutubeVideoPageSectionVideoDetails(props) {
                      <span className="material-symbols-outlined icon-small margin-right">
                         thumb_up
                      </span>
-                     <p>{props.likeCount}</p>
+                     <p>{props?.likeCount}</p>
                      <div className="vertical-line"> </div>
                      <span className="material-symbols-outlined icon-small">thumb_down</span>
                   </div>
@@ -66,16 +67,21 @@ export default function YoutubeVideoPageSectionVideoDetails(props) {
             }`}
          >
             <p className="text-para-bold">
-               {props.viewCount} views {props.publishedAt}
+               {props?.viewCount} views {props?.publishedAt}
             </p>
             <div className="youtube-video-page-description-section">
                <p className={`text-para ${showMore ? "display-block" : "display-none"}`}>
                   {/* {props.description.substring(0, 100)} */}
-                  {props.description.split(".")[0]}.
+                  {props?.description.split(".")[0]}.
                </p>
                <p className={`text-para ${showMore ? "display-none" : "display-block"}`}>
-                  {props.description}
+                  {props?.description}
                </p>
+               {/* {showMore ? (
+                  <p style={{ height: "5rem" }}>{props?.description}</p>
+               ) : (
+                  <p className={`text-para`}>{props?.description}</p>
+               )} */}
             </div>
             <p className="youtube-video-page-show-more" onClick={showMoreFunc}>
                {showMore ? "Show More" : "Show Less"}
