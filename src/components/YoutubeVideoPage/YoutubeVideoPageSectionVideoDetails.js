@@ -1,20 +1,28 @@
 import React from "react";
 
-export default function YoutubeVideoPageSectionVideoDetails() {
+export default function YoutubeVideoPageSectionVideoDetails(props) {
+   const [showMore, setShowMore] = React.useState(true);
+
+   const showMoreFunc = () => {
+      setShowMore(!showMore);
+   };
    return (
       <section className="youtube-video-page-section-video-details-container">
          <div className="youtube-video-page-section-video-details-container-top">
             <div className="youtube-video-page-section-video-details-container-top-tag">
-               <p>#tagname</p>
+               <p>
+                  #{props.tags[0].split(" ").join("")} #{props.tags[1].split(" ").join("")} #
+                  {props.tags[2].split(" ").join("")}
+               </p>
             </div>
             <div className="youtube-video-page-section-video-details-container-top-video-title">
-               <h3>This is a video title name and possible anything</h3>
+               <h3>{props.title}</h3>
             </div>
             <section className="youtube-video-page-section-video-details-container-top-section">
                <section className="youtube-video-page-section-video-details-container-top-left-container">
                   <div className="youtube-video-page-section-video-details-container-top-channel-icon"></div>
                   <div className="youtube-video-page-section-video-details-container-top-channel-info">
-                     <p className="text-para-bold">Channel Name</p>
+                     <p className="text-para-bold">{props.channelTitle}</p>
                      <p className="text-para-small">100M subscribers</p>
                   </div>
                   <div className="youtube-video-page-section-video-details-container-top-subscribe">
@@ -26,7 +34,7 @@ export default function YoutubeVideoPageSectionVideoDetails() {
                      <span className="material-symbols-outlined icon-small margin-right">
                         thumb_up
                      </span>
-                     <p>80K</p>
+                     <p>{props.likeCount}</p>
                      <div className="vertical-line"> </div>
                      <span className="material-symbols-outlined icon-small">thumb_down</span>
                   </div>
@@ -52,14 +60,26 @@ export default function YoutubeVideoPageSectionVideoDetails() {
                </section>
             </section>
          </div>
-         <div className="youtube-video-page-section-video-details-container-bottom">
-            <p className="text-para-bold">8,010,809 views 25 Mar 2022</p>
-            <p className="text-para">
-               Explore Juneau, Alaska with us as we navigate through an Alaskan summer. We visited
-               the Tracy Arm Fjord, Mendenhall Glacier, Pack Creek bears, Hoonah, and some beautiful
-               Juneau icebergs. To view at 8K 60P you'll need to use Chrome.
+         <div
+            className={`youtube-video-page-section-video-details-container-bottom ${
+               showMore ? "youtube-video-page-hover" : "youtube-video-page-hover-remove"
+            }`}
+         >
+            <p className="text-para-bold">
+               {props.viewCount} views {props.publishedAt}
             </p>
-            <p className="youtube-video-page-show-more">Show More</p>
+            <div className="youtube-video-page-description-section">
+               <p className={`text-para ${showMore ? "display-block" : "display-none"}`}>
+                  {/* {props.description.substring(0, 100)} */}
+                  {props.description.split(".")[0]}.
+               </p>
+               <p className={`text-para ${showMore ? "display-none" : "display-block"}`}>
+                  {props.description}
+               </p>
+            </div>
+            <p className="youtube-video-page-show-more" onClick={showMoreFunc}>
+               {showMore ? "Show More" : "Show Less"}
+            </p>
          </div>
       </section>
    );

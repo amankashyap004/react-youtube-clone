@@ -1,5 +1,5 @@
 .youtube-video-page-section {
-   width: 100vw;
+   /* width: 100vw; */
    padding: 1rem 4rem;
    display: flex;
 }
@@ -77,8 +77,20 @@
    cursor: pointer;
 }
 
-.youtube-video-page-section-video-details-container-bottom:hover {
+/* .youtube-video-page-section-video-details-container-bottom:hover {
    background-color: #606060;
+} */
+
+.youtube-video-page-hover:hover {
+   background-color: #606060;
+}
+
+.youtube-video-page-hover-remove:hover {
+   background-color: #313131;
+}
+
+.youtube-video-page-description-section {
+   white-space: pre-wrap;
 }
 
 .youtube-video-page-show-more {

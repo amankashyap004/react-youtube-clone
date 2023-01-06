@@ -1,4 +1,5 @@
 import React from "react";
+import YoutubeVideoPageVideoContain from "./YoutubeVideoPageVideoContain";
 
 export default function YoutubeVideoPageVideoContainer() {
    const youtubeAPIKey = "AIzaSyDJYaKEW09xd_Lv-aaIW3KWD7BChl1-H2w";
@@ -21,7 +22,11 @@ export default function YoutubeVideoPageVideoContainer() {
    return (
       <div>
          {apiAllData?.map((item) => {
-            return <div className="youtube-video-page-video-container" key={item.id}></div>;
+            return (
+               <div className="youtube-video-page-video-container" key={item.id}>
+                  <YoutubeVideoPageVideoContain videoId={item.id} />
+               </div>
+            );
          })}
       </div>
    );
