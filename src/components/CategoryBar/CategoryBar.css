@@ -1,4 +1,4 @@
-.category-bar-container{
+.category-bar-container {
 }
 
 .category-bar-section {
@@ -9,36 +9,35 @@
 }
 
 .category-bar-section:hover::after {
-   content: "";
+   font-family: "material symbols outlined";
+   content: "chevron_left";
    position: absolute;
-   left: 0.8rem;
-   top: 2.5rem;
-   display: block;
-   border-left: 2px solid #ffffff;
-   border-top: 2px solid #ffffff;
-   width: 8px;
-   height: 8px;
-   transform: translate(-50%, -50%) rotate(-45deg);
+   font-size: 2rem;
+   background-color: black;
+   box-shadow: 1rem 0 0.5rem black;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .category-bar-section:hover::before {
-   content: "";
+   font-family: "material symbols outlined";
+   content: "chevron_right";
    position: absolute;
-   right: 1rem;
-   top: 2.5rem;
-   margin-right: 0.5rem;
-   display: block;
-   border-right: 2px solid #ffffff;
-   border-bottom: 2px solid #ffffff;
-   width: 8px;
-   height: 8px;
-   float: right;
-   transform: translate(50%, -50%) rotate(-45deg);
+   font-size: 2rem;
+   background-color: black;
+   box-shadow: -1rem 0 0.5rem black;
+   color: white;
+   right: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .category-bar {
    background-color: black;
-   padding: .5rem 0;
+   /* padding: 0.5rem; */
 }
 
 .category-bar-section::-webkit-scrollbar {

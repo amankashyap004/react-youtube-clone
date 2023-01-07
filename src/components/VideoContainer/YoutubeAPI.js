@@ -26,7 +26,7 @@ export default function YoutubeAPI() {
                ...item,
             }));
             setApiAllData(result);
-            console.log(result);
+            // console.log(result);
          })
          .catch((err) => console.log(err));
    }, []);

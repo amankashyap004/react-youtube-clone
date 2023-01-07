@@ -4,7 +4,7 @@
 }
 
 .youtube-recommendation-video-category-bar-section {
-   
+   padding: 1rem 0;
 }
 
 .youtube-recommendation-video-container {
@@ -15,9 +15,7 @@
 }
 
 .youtube-search-video-container-image {
-   
 }
-
 
 .youtube-recommendation-video-thumbnail {
    display: flex;
@@ -57,7 +55,6 @@
    font-size: 0.8em;
    font-weight: 500;
 }
-
 
 .youtube-recommendation-video-details {
    display: flex;
@@ -104,8 +101,8 @@
 }
 
 .youtube-recommendation-video-details-right {
-   margin-left: .3rem;
-   color: white; 
+   margin-left: 0.3rem;
+   color: white;
    position: relative;
 }
 
@@ -120,4 +117,3 @@
    right: 5rem;
    margin-top: 0.1rem;
 } */
-
