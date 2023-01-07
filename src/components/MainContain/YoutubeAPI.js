@@ -1,5 +1,5 @@
 import React from "react";
-import "./VideoContainer.css";
+import "./Style.css";
 import moment from "moment";
 import { Link } from "react-router-dom";
 
@@ -12,10 +12,11 @@ export default function YoutubeAPI() {
    // const onClickVideoPage = () => {
    //    console.log(item.id);
    // };
-   let youtubeAPIKey = "AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE";
-   let videoHTTP = "https://www.googleapis.com/youtube/v3/videos?";
 
-   let fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=IN`;
+   const youtubeAPIKey = "AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE";
+   const videoHTTP = "https://www.googleapis.com/youtube/v3/videos?";
+
+   const fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=IN`;
    const [apiAllData, setApiAllData] = React.useState([]);
 
    React.useEffect(() => {
@@ -31,8 +32,8 @@ export default function YoutubeAPI() {
          .catch((err) => console.log(err));
    }, []);
    return (
-      <div className="demo">
-         {apiAllData.map((item) => {
+      <div className="youtube-api-container">
+         {apiAllData.map((item, i) => {
             return (
                <section
                   className={
@@ -42,7 +43,7 @@ export default function YoutubeAPI() {
                   }
                   onDoubleClick={onHover}
                   onClick={() => console.log(item.id)}
-                  key={item.id}
+                  key={i}
                >
                   {/* { console.log(item.snippet.thumbnails.high.url)} */}
                   <Link key={item.id} to={`/video/${item.id}`}>
