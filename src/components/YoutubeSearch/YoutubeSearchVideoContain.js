@@ -1,8 +1,7 @@
 import React from "react";
-import YoutubeSearchVideoContainer from "./YoutubeSearchVideoContainer";
-import YoutubeSearchVideoContainerDetails from "./YoutubeSearchVideoContainerDetails";
 import { useParams } from "react-router-dom";
 import moment from "moment/moment";
+import "./YoutubeSearch.css";
 
 export default function YoutubeSearchVideoContain() {
    let { searchQuery } = useParams();
@@ -29,17 +28,47 @@ export default function YoutubeSearchVideoContain() {
          {apiAllData?.map((item, i) => {
             return (
                <div className="youtube-search-video-section" key={i}>
-                  <YoutubeSearchVideoContainer
-                     image={item.snippet.thumbnails.high.url}
-                     // videoDuration={item.contentDetails.duration}
-                  />
-                  <YoutubeSearchVideoContainerDetails
-                     title={item.snippet.title}
-                     // viewCount={item.statistics.viewCount}
-                     publishedAt={moment(`${item.snippet.publishedAt}`, "YYYYMMDD").fromNow()}
-                     channelTitle={item.snippet.channelTitle}
-                     description={item.snippet.description}
-                  />
+                  <section className="youtube-search-video-container">
+                     <div className="youtube-search-video-container-image">
+                        <img
+                           src={item.snippet.thumbnails.high.url}
+                           alt="yt thumbnail"
+                           className="youtube-search-video-container-img"
+                        />
+                        <div className="youtube-search-video-container-timer">
+                           <p className="youtube-search-video-container-timer-text">28:08</p>
+                        </div>
+                     </div>
+                  </section>
+                  <section className="youtube-search-video-container-details">
+                     <div className="youtube-search-video-container-details-left">
+                        <h3 className="youtube-search-video-container-details-title">
+                           {item.snippet.title}
+                        </h3>
+                        <div className="youtube-search-video-container-details-more-details">
+                           <p>
+                              {"200299"} •{" "}
+                              {moment(`${item.snippet.publishedAt}`, "YYYYMMDD").fromNow()}
+                           </p>
+                        </div>
+                        <div className="youtube-search-video-container-details-channel-section">
+                           <span className="material-symbols-outlined youtube-search-video-container-details-channel-icon">
+                              person
+                           </span>
+                           <p className="youtube-search-video-container-details-channel-name">
+                              {item.snippet.channelTitle}
+                           </p>
+                        </div>
+                        <div className="youtube-search-video-container-details-discretion">
+                           <p className="youtube-search-video-container-details-discretion-text">
+                              {item.snippet.description}
+                           </p>
+                        </div>
+                     </div>
+                     <div className="youtube-search-video-container-details-right">
+                        <span className="material-symbols-outlined">more_vert</span>
+                     </div>
+                  </section>
                </div>
             );
          })}

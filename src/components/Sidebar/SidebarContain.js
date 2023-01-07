@@ -8,7 +8,10 @@ export default function SidebarContain(props) {
    };
 
    return (
-      <div className={selected?"sidebar-contain sidebar-contain-selected":"sidebar-contain"} onClick={selectFunc}>
+      <div
+         className={selected ? "sidebar-contain sidebar-contain-selected" : "sidebar-contain"}
+         onClick={selectFunc}
+      >
          <span className="material-symbols-outlined icon">{props.iconName}</span>
          <p className="sidebar-text">{props.titleName}</p>
       </div>

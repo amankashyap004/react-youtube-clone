@@ -42,3 +42,188 @@
    align-items: flex-start;
    /* margin-bottom: 1rem; */
 }
+
+/* youtube-search-Channel-section */
+
+.youtube-search-Channel-section {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+
+.youtube-search-channel-container {
+   width: 360px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.youtube-search-channel-container-image {
+   height: 136px;
+   width: 136px;
+   border-radius: 50%;
+   position: relative;
+}
+
+.youtube-search-channel-container-img {
+   position: absolute;
+   height: 136px;
+   width: 136px;
+   border-radius: 50%;
+}
+
+.youtube-search-channel-container-details {
+   padding: 1rem;
+}
+
+.youtube-search-channel-container-details-left {
+   /* background-color: aqua; */
+}
+
+.youtube-search-channel-container-details-channel-name {
+   font-size: 1.1rem;
+   font-weight: 600;
+   color: white;
+}
+
+.youtube-search-channel-container-details-more-details {
+   color: white;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.youtube-search-channel-container-details-discretion-text {
+   color: white;
+}
+
+/* youtube-search-video-container */
+.youtube-search-video-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: black;
+   cursor: pointer;
+}
+
+.youtube-search-video-container-image {
+   width: 360px;
+   /* height: 180px; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.youtube-search-video-container-img {
+   width: 100%;
+   /* height: inherit; */
+   border-radius: 0.5rem;
+}
+
+.youtube-search-video-container-timer {
+   background-color: rgba(0, 0, 0, 0.712);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 4px;
+   padding: 0.1rem 0.3rem;
+   position: absolute;
+   /* bottom: 0.5rem; */
+   bottom: 2.3rem;
+   right: 0.4rem;
+}
+
+.youtube-search-video-container-timer-text {
+   color: #ffffff;
+   font-size: 0.9em;
+   font-weight: 500;
+}
+
+.youtube-search-video-container-details {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   margin: 0.5rem 1rem;
+   margin-top: 2rem;
+   color: #ffffff;
+   width: 60vw;
+}
+
+.youtube-search-video-container-details-padding {
+   padding: 0 0.5rem;
+}
+
+.youtube-search-video-container-details-left {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.youtube-search-video-container-details-title {
+   color: white;
+   font-size: 1em;
+}
+
+.youtube-search-video-container-details-more-details {
+   color: #aaaaaa;
+   font-size: 0.8em;
+   margin-top: 0.5rem;
+}
+
+.youtube-search-video-container-details-channel-section {
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   margin: 0.6rem 0;
+}
+
+.youtube-search-video-container-details-channel-icon {
+   padding: 0.2rem;
+   border-radius: 50%;
+   cursor: pointer;
+   background-color: #303030;
+   color: wheat;
+   margin-right: 0.5rem;
+}
+
+.youtube-search-video-container-details-channel-name {
+   color: #aaaaaa;
+   font-size: 0.9em;
+   font-weight: 500;
+   margin: 0.5rem 0;
+   cursor: pointer;
+}
+
+.youtube-search-video-container-details-channel-name:hover {
+   color: #ffffff;
+}
+
+.youtube-search-video-container-details-discretion {
+   color: #aaaaaa;
+   margin-top: 0.5rem;
+}
+
+.youtube-search-video-container-details-discretion-text {
+   font-size: 0.8em;
+}
+
+.youtube-search-video-container-details-right {
+   margin-left: 2rem;
+   color: white;
+   position: relative;
+}
+
+/* .youtube-search-video-container-details:hover::before {
+   font-family: "Font Awesome 5 Free";
+   content: "\f142";
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   position: absolute;
+   font-weight: 900;
+   right: 5rem;
+   margin-top: 0.1rem;
+} */

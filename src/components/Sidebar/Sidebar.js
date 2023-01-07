@@ -27,9 +27,7 @@ export default function Sidebar(props) {
                />
                <p className="sidebar-text">Shorts</p>
             </div>
-            <Link to={"/video"}>
-               <SidebarContain iconName="subscriptions" titleName="Subscriptions" />
-            </Link>
+            <SidebarContain iconName="subscriptions" titleName="Subscriptions" />
          </section>
          <div className="sidebar-hr"></div>
 
