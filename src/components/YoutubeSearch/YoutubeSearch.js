@@ -24,7 +24,7 @@ export default function YoutubeSearch() {
          .catch((err) => console.log(err));
    }, [searchQuery]);
 
-   let fetchVideoUrl = `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet&q=${searchQuery}&type=video&safeSearch=none&maxResults=8`;
+   const fetchVideoUrl = `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet&q=${searchQuery}&type=video&safeSearch=none&maxResults=8`;
    const [apiVideoAllData, setApiVideoAllData] = React.useState([]);
 
    React.useEffect(() => {
@@ -35,6 +35,7 @@ export default function YoutubeSearch() {
                ...item,
             }));
             setApiVideoAllData(videoResult);
+            console.log(videoResult);
          })
          .catch((err) => console.log(err));
    }, [searchQuery]);
