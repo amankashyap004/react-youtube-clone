@@ -32,7 +32,7 @@ export default function YoutubeVideoPage() {
          <section className="youtube-video-page-section-video-container">
             <div className="youtube-video-page-section-video-section">
                <object
-                  data={`https://www.youtube.com/embed/${videoId}`}
+                  // data={`https://www.youtube.com/embed/${videoId}`}
                   className="youtube-video-page-video-contain-video"
                ></object>
             </div>
