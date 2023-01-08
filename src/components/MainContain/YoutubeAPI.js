@@ -33,7 +33,7 @@ export default function YoutubeAPI() {
    }, []);
    return (
       <div className="youtube-api-container">
-         {apiAllData.map((item, i) => {
+         {apiAllData?.map((item, i) => {
             return (
                <section
                   className={
