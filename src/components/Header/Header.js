@@ -4,12 +4,18 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
    const [inputSearch, setInputSearch] = React.useState("");
+   const [isFullSideBar, setIsFullSideBar] = React.useState(true);
 
    return (
       <header className="header">
          <section className="header-section">
+            <span
+               className="material-symbols-outlined icon"
+               onClick={() => setIsFullSideBar(!isFullSideBar)}
+            >
+               {isFullSideBar ? "menu" : "close"}
+            </span>
             <Link to="/" className="header-container">
-               <span className="material-symbols-outlined icon">menu</span>
                <div className="logo">
                   <img src="/images/youtube-icon.png" className="logo-img" alt="yt logo" />
                   <h3 className="logo-text">YouTube</h3>
