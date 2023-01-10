@@ -8,7 +8,7 @@ export default function MainContain() {
          <div className="main-contain">
             <YoutubeAPI />
          </div>
-         <div className="main-hr"></div>
+         {/* <div className="main-hr"></div>
          <h4 className="extra-text">Trending</h4>
          <div className="main-contain">
             <YoutubeAPI />
@@ -16,7 +16,7 @@ export default function MainContain() {
          <div className="main-hr"></div>
          <div className="main-contain">
             <YoutubeAPI />
-         </div>
+         </div> */}
       </section>
    );
 }

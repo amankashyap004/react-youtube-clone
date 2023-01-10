@@ -125,3 +125,136 @@ a {
 .demo-name {
    color: #ffffff;
 }
+
+@media screen and (max-width: 950px) {
+   .input {
+      width: 20rem;
+   }
+   .sidebar {
+      /* width: 15vw; */
+      display: none;
+   }
+
+   .main-body {
+      width: 100vw;
+   }
+
+   .youtube-api-container {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+
+   .video-container-section {
+      width: 250px;
+   }
+
+   .video-container-image {
+      width: 250px;
+   }
+
+   .YoutubeSearchSection {
+      width: 100vw;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   .input {
+      width: 15rem;
+   }
+
+   .main-body {
+      padding: 0;
+   }
+
+   .youtube-api-container {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .video-container-section {
+      width: 310px;
+   }
+
+   .video-container-image {
+      width: 310px;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .header {
+      padding: 0.8rem;
+   }
+
+   .input {
+      width: 10rem;
+      padding: 0.8rem;
+      height: 1.5rem;
+      font-size: 1em;
+   }
+
+   .search-icon {
+      padding: 0.3rem 0.6rem;
+   }
+
+   .mic-container {
+      /* padding: 0.4rem 0.55rem;
+      margin-left: 0.5rem; */
+      display: none;
+   }
+
+   .header-notification-icon {
+      margin: 0 0.2rem;
+   }
+   .header-left-icon {
+      padding: 0.4rem;
+   }
+
+   .logo {
+      display: none;
+   }
+
+   .youtube-api-container {
+      grid-template-columns: 1fr;
+   }
+
+   .video-container-section {
+      width: 100%;
+   }
+
+   .video-container-image {
+      width: 100%;
+   }
+
+   .video-container-details-right {
+      margin-left: 0.5rem;
+   }
+
+   .YoutubeSearchSection {
+      padding: 0;
+   }
+
+   .youtube-search-channel-container {
+      width: 200px;
+   }
+
+   .youtube-search-channel-container-details {
+      padding: 0.5rem;
+   }
+
+   .youtube-search-video-section {
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+   }
+
+   .youtube-search-video-container-image {
+      width: 100%;
+   }
+
+   .youtube-search-video-container-details {
+      margin: 0;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      width: 90vw;
+   }
+   .youtube-search-video-container-details-padding {
+      padding: 0 0.5rem;
+   }
+}
