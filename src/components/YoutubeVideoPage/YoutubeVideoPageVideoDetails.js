@@ -21,10 +21,12 @@ export default function YoutubeVideoPageSectionVideoDetails(props) {
             </div>
             <section className="youtube-video-page-section-video-details-container-top-section">
                <section className="youtube-video-page-section-video-details-container-top-left-container">
-                  <div className="youtube-video-page-section-video-details-container-top-channel-icon"></div>
-                  <div className="youtube-video-page-section-video-details-container-top-channel-info">
-                     <p className="text-para-bold">{props?.channelTitle}</p>
-                     <p className="text-para-small">100M subscribers</p>
+                  <div className="youtube-video-page-section-video-details-container-top-left-container-left">
+                     <div className="youtube-video-page-section-video-details-container-top-channel-icon"></div>
+                     <div className="youtube-video-page-section-video-details-container-top-channel-info">
+                        <p className="text-para-bold">{props?.channelTitle}</p>
+                        <p className="text-para-small">100M subscribers</p>
+                     </div>
                   </div>
                   <div className="youtube-video-page-section-video-details-container-top-subscribe">
                      <p className="bg-btn">Subscribe</p>

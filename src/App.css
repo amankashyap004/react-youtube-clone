@@ -154,6 +154,44 @@ a {
    .YoutubeSearchSection {
       width: 100vw;
    }
+
+   .youtube-video-page-section {
+      padding: 1rem;
+   }
+
+   .youtube-video-page-video-contain-video {
+      width: 60vw;
+      height: 360px;
+   }
+
+   .youtube-video-page-section-video-details-container {
+      width: 60vw;
+   }
+
+   .youtube-video-page-section-video-details-container-top-section {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin: 1rem 0;
+   }
+
+   .youtube-video-page-section-video-details-container-top-left-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin-top: 1rem;
+   }
+
+   .youtube-video-page-section-recommendation {
+      width: 30vw;
+      margin-left: 1.2rem;
+   }
+
+   .youtube-recommendation-video-section {
+      width: 40vw;
+   }
 }
 
 @media screen and (max-width: 800px) {
@@ -175,6 +213,35 @@ a {
 
    .video-container-image {
       width: 310px;
+   }
+
+   .youtube-video-page-section {
+      padding: 1rem 0;
+      flex-direction: column;
+   }
+
+   .youtube-video-page-video-contain-video {
+      width: 100vw;
+      height: 360px;
+   }
+
+   .youtube-video-page-section-video-details-container {
+      width: 100vw;
+      padding: 0.5rem 1rem;
+   }
+
+   .youtube-video-page-section-recommendation {
+      width: 90vw;
+      margin-left: 1rem;
+   }
+
+   .youtube-recommendation-video-section {
+      width: 90vw;
+   }
+
+   .youtube-recommendation-video-category-bar-section {
+      padding: 1rem 0;
+      /* padding-right: 1rem; */
    }
 }
 
@@ -254,7 +321,24 @@ a {
       margin-left: 1rem;
       width: 90vw;
    }
+
    .youtube-search-video-container-details-padding {
       padding: 0 0.5rem;
+   }
+
+   .youtube-video-page-video-contain-video {
+      width: 100vw;
+      height: 240px;
+   }
+
+   .youtube-video-page-section-video-details-container-top-right-container {
+      overflow-x: scroll;
+      width: 90vw;
+      padding: 0.5rem 1rem;
+      padding-left: 8rem;
+   }
+
+   .youtube-video-page-section-video-details-container-top-right-container::-webkit-scrollbar {
+      display: none;
    }
 }

@@ -47,6 +47,12 @@
    align-items: center;
 }
 
+.youtube-video-page-section-video-details-container-top-left-container-left {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
 .youtube-video-page-section-video-details-container-top-channel-icon {
    background-color: #313131;
    border-radius: 50%;
