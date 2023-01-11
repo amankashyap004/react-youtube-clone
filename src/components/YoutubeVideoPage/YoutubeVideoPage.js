@@ -6,12 +6,11 @@ import moment from "moment";
 import { useParams } from "react-router-dom";
 
 export default function YoutubeVideoPage() {
-   const youtubeAPIKey = "AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE";
    const videoHTTP = "https://www.googleapis.com/youtube/v3/videos?";
 
    const { videoId } = useParams();
 
-   const fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&id=${videoId}&part=snippet%2CcontentDetails%2Cstatistics`;
+   const fetchUrl = `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&id=${videoId}&part=snippet%2CcontentDetails%2Cstatistics`;
    const [apiAllData, setApiAllData] = React.useState(null);
 
    React.useEffect(() => {
@@ -32,7 +31,7 @@ export default function YoutubeVideoPage() {
          <section className="youtube-video-page-section-video-container">
             <div className="youtube-video-page-section-video-section">
                <object
-                  data={`https://www.youtube.com/embed/${videoId}`}
+                  // data={`https://www.youtube.com/embed/${videoId}`}
                   className="youtube-video-page-video-contain-video"
                ></object>
             </div>

@@ -14,9 +14,8 @@ export default function YoutubeAPI() {
    //    console.log(item.id);
    // };
 
-   const youtubeAPIKey = "AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE";
    const videoHTTP = "https://www.googleapis.com/youtube/v3/videos?";
-   const fetchUrl = `${videoHTTP}key=${youtubeAPIKey}&part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=IN`;
+   const fetchUrl = `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=IN`;
    const [apiAllData, setApiAllData] = React.useState([]);
 
    React.useEffect(() => {
