@@ -126,6 +126,26 @@ a {
    color: #ffffff;
 }
 
+.btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: red;
+   color: white;
+   padding: 0.8rem 1rem;
+   font-weight: 500;
+   font-size: 1rem;
+   border-radius: 0.5rem;
+   margin: auto;
+   margin-top: 1rem;
+   cursor: pointer;
+   transition: all ease 0.5s;
+}
+
+.btn:active {
+   transform: scale(1.01);
+}
+
 @media screen and (max-width: 950px) {
    .input {
       width: 20rem;
