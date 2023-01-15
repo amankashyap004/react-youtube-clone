@@ -20,7 +20,7 @@ export default function YoutubeSearch() {
                ...item,
             }));
             setApiChannelAllData(channelResult);
-            // console.log(result);
+            // console.log(channelResult);
          })
          .catch((err) => console.log(err));
    }, [searchQuery]);
@@ -31,11 +31,19 @@ export default function YoutubeSearch() {
    React.useEffect(() => {
       fetch(fetchVideoUrl)
          .then((res) => res.json())
-         .then((data) => {
-            const videoResult = data.items?.map((item) => ({
-               ...item,
-            }));
+         .then(async (data) => {
+            const videoResult = data.items;
             setApiVideoAllData(videoResult);
+            for (let i = 0; i < videoResult.length; i++) {
+               const videoId = videoResult[i].id.videoId;
+               const videoRes = await fetch(
+                  `https://www.googleapis.com/youtube/v3/videos?key=AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE&id=${videoId}&part=snippet%2CcontentDetails%2Cstatistics`
+               );
+               const videoData = await videoRes.json();
+               videoResult[i].contentDetails = videoData.items[0].contentDetails;
+
+               //toDo get Channel Info
+            }
             console.log(videoResult);
          })
          .catch((err) => console.log(err));

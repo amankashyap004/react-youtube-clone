@@ -1,13 +1,15 @@
 import React from "react";
 
+const typeFilters = ["video", "channel", "playlist"];
+
 export default function YoutubeSearchFilters() {
    const [isFilter, setIsFilter] = React.useState(false);
    const handleClick = () => {
       setIsFilter(!isFilter);
    };
-   let value = "";
-   const handleClickValue = () => {
-      console.log(value);
+   const [isValue, setIsValue] = React.useState("");
+   const handleClickValue = (val) => {
+      console.log(val);
    };
 
    return (
@@ -33,9 +35,15 @@ export default function YoutubeSearchFilters() {
                   <h5 className="youtube-search-filters-more-heading">TYPE</h5>
                   <div className="youtube-search-filters-more-hr"></div>
                   <ul className="youtube-search-filters-more-ul">
-                     <li className="text-para-small">Video</li>
-                     <li className="text-para-small">Channel</li>
-                     <li className="text-para-small">Playlist</li>
+                     {typeFilters.map((typeFilter, id) => (
+                        <li
+                           key={id}
+                           className="text-para-small"
+                           onClick={() => handleClickValue(typeFilter)}
+                        >
+                           {typeFilter}
+                        </li>
+                     ))}
                   </ul>
                </section>
                <section className="youtube-search-filters-more-container">

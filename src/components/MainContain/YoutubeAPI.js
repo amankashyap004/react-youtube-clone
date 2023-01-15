@@ -2,7 +2,7 @@ import React from "react";
 import "./Style.css";
 import moment from "moment";
 import { Link } from "react-router-dom";
-import InfiniteScroll from "react-infinite-scroller";
+// import InfiniteScroll from "react-infinite-scroller";
 
 export default function YoutubeAPI() {
    const [isActive, setISActive] = React.useState(false);
@@ -41,9 +41,9 @@ export default function YoutubeAPI() {
       getPopularVideos();
    };
 
-   // console.log(apiAllData);
+   console.log(apiAllData);
    // const getVideos = () => {
-   //    setApiAllData({ moreResult: moreResults + 10 });
+   //    setApiAllData({ moreResult: nextPage + 10 });
    //    fetch(fetchUrl)
    //       .then((res) => res.json())
    //       .then((data) => {
@@ -61,10 +61,13 @@ export default function YoutubeAPI() {
    return (
       <div>
          {/* <InfiniteScroll
-            dataLength={10}
+            pageStart={0}
             loadMore={getMoreVideo}
-            hasMore={true}
-            loader={<h4>Loading...</h4>}
+            hasMore={true || false}
+            // dataLength={10}
+            // loadMore={getMoreVideo}
+            // hasMore={true}
+            // loader={<h4>Loading...</h4>}
          > */}
          <div className="youtube-api-container">
             {apiAllData?.map((item, i) => {
