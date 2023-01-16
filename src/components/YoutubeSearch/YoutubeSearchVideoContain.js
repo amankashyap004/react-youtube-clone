@@ -17,10 +17,7 @@ export default function YoutubeSearchVideoContain({ videoResult }) {
                   <div className="youtube-search-video-container-timer">
                      <p className="youtube-search-video-container-timer-text">
                         {moment
-                           .utc(
-                              moment.duration(videoResult.contentDetails.duration).asSeconds() *
-                                 1000
-                           )
+                           .utc(moment.duration(videoResult.duration).asSeconds() * 1000)
                            .format("HH:mm:ss")}
                      </p>
                   </div>
