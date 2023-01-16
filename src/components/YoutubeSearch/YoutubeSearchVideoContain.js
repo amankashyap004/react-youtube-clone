@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment/moment";
+import moment from "moment";
 import "./YoutubeSearch.css";
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,14 @@ export default function YoutubeSearchVideoContain({ videoResult }) {
                      className="youtube-search-video-container-img"
                   />
                   <div className="youtube-search-video-container-timer">
-                     <p className="youtube-search-video-container-timer-text">28:08</p>
+                     <p className="youtube-search-video-container-timer-text">
+                        {moment
+                           .utc(
+                              moment.duration(videoResult.contentDetails.duration).asSeconds() *
+                                 1000
+                           )
+                           .format("HH:mm:ss")}
+                     </p>
                   </div>
                </div>
             </section>
