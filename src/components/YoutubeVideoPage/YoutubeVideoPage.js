@@ -22,6 +22,19 @@ export default function YoutubeVideoPage() {
             // }));
             setApiAllData(data.items[0]);
             console.log(data);
+            // .then(async (data) => {
+            //    const videoResult = data.items;
+            //    setApiAllData(videoResult);
+            //    for (let i = 0; i < videoResult.length; i++) {
+            //       const videoIdNew = videoResult[i].id.videoId;
+            //       const channelRes = await fetch(
+            //          `https://www.googleapis.com/youtube/v3/search?key=${"AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE"}&id=${videoIdNew}&part=snippet&type=channel&safeSearch=none`
+            //       );
+            //       const channelData = await channelRes.json();
+            //       videoResult[i].channelImage = channelData.items[0].snippet.thumbnails;
+            //    }
+            //    console.log(videoResult);
+            //    console.log(apiAllData);
          })
          .catch((err) => console.log(err));
    }, []);
