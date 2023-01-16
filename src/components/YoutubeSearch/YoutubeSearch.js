@@ -20,12 +20,12 @@ export default function YoutubeSearch() {
                ...item,
             }));
             setApiChannelAllData(channelResult);
-            // console.log(channelResult);
+            console.log(channelResult);
          })
          .catch((err) => console.log(err));
    }, [searchQuery]);
 
-   const fetchVideoUrl = `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet&q=${searchQuery}&type=video&safeSearch=none&maxResults=8`;
+   const fetchVideoUrl = `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet&q=${searchQuery}&type=video&safeSearch=none&maxResults=3`;
    const [apiVideoAllData, setApiVideoAllData] = React.useState([]);
 
    React.useEffect(() => {
@@ -37,12 +37,16 @@ export default function YoutubeSearch() {
             for (let i = 0; i < videoResult.length; i++) {
                const videoId = videoResult[i].id.videoId;
                const videoRes = await fetch(
-                  `https://www.googleapis.com/youtube/v3/videos?key=AIzaSyAvqzRb2G7RmclgTATLtEogCtoec0c2zmE&id=${videoId}&part=snippet%2CcontentDetails%2Cstatistics`
+                  `https://www.googleapis.com/youtube/v3/videos?key=${process.env.REACT_APP_YOUTUBE_API_KEY}&id=${videoId}&part=snippet%2CcontentDetails%2Cstatistics`
                );
                const videoData = await videoRes.json();
                videoResult[i].contentDetails = videoData.items[0].contentDetails;
 
-               //toDo get Channel Info
+               const channelRes = await fetch(
+                  `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet&q=${searchQuery}&id=${videoId}&type=channel&safeSearch=none`
+               );
+               const channelData = await channelRes.json();
+               videoResult[i].channelImage = channelData.items[0].snippet.thumbnails;
             }
             console.log(videoResult);
          })

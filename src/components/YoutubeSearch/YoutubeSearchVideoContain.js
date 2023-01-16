@@ -42,6 +42,9 @@ export default function YoutubeSearchVideoContain({ videoResult }) {
                   <span className="material-symbols-outlined youtube-search-video-container-details-channel-icon">
                      person
                   </span>
+                  <span className="youtube-search-video-container-details-channel-icon">
+                     {videoResult.channelImage}
+                  </span>
                   <p className="youtube-search-video-container-details-channel-name">
                      {videoResult.snippet.channelTitle}
                   </p>
