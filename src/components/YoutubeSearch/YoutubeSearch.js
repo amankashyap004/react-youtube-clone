@@ -40,7 +40,7 @@ export default function YoutubeSearch() {
                   `https://www.googleapis.com/youtube/v3/videos?key=${process.env.REACT_APP_YOUTUBE_API_KEY}&id=${videoId}&part=snippet%2CcontentDetails%2Cstatistics`
                );
                const videoData = await videoRes.json();
-               videoResult[i].contentDetails = await videoData.items[0].contentDetails.duration;
+               videoResult[i].contentDetails = videoData.items[0].contentDetails;
                const channelRes = await fetch(
                   `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet&q=${searchQuery}&id=${videoId}&type=channel&safeSearch=none`
                );

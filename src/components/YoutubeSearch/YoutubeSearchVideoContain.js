@@ -17,7 +17,7 @@ export default function YoutubeSearchVideoContain({ videoResult }) {
                   <div className="youtube-search-video-container-timer">
                      <p className="youtube-search-video-container-timer-text">
                         {moment
-                           .utc(moment.duration(videoResult.duration).asSeconds() * 1000)
+                           .utc(moment.duration("PT10M45S").asSeconds() * 1000)
                            .format("HH:mm:ss")}
                      </p>
                   </div>
@@ -36,11 +36,11 @@ export default function YoutubeSearchVideoContain({ videoResult }) {
                   </p>
                </div>
                <div className="youtube-search-video-container-details-channel-section">
-                  <span className="material-symbols-outlined youtube-search-video-container-details-channel-icon">
+                  {/* <span className="material-symbols-outlined youtube-search-video-container-details-channel-icon">
                      person
-                  </span>
+                  </span> */}
                   <span className="youtube-search-video-container-details-channel-icon">
-                     {videoResult.channelImage}
+                     <img src={videoResult.channelImage.high.url} alt="yt-channel-logo" />
                   </span>
                   <p className="youtube-search-video-container-details-channel-name">
                      {videoResult.snippet.channelTitle}

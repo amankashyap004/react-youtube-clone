@@ -229,12 +229,15 @@
 }
 
 .youtube-search-video-container-details-channel-icon {
-   padding: 0.2rem;
+   width: 40px;
    border-radius: 50%;
    cursor: pointer;
    background-color: #303030;
-   color: wheat;
    margin-right: 0.5rem;
+}
+.youtube-search-video-container-details-channel-icon > img {
+   border-radius: 50%;
+   width: 100%;
 }
 
 .youtube-search-video-container-details-channel-name {
