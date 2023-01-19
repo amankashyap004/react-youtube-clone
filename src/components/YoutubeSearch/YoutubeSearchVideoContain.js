@@ -4,6 +4,16 @@ import "./YoutubeSearch.css";
 import { Link } from "react-router-dom";
 
 export default function YoutubeSearchVideoContain({ videoResult }) {
+   const [isVideoDuration, setIsVideoDuration] = React.useState("PT0M0S");
+   setTimeout(function () {
+      setIsVideoDuration(videoResult.videoDuration);
+   }, 5000);
+
+   const [isChannelLogo, setIsChannelLogo] = React.useState("/images/Blank_Square.png");
+   setTimeout(function () {
+      setIsChannelLogo(videoResult.channelImage);
+   }, 5000);
+
    return (
       <div className="youtube-search-video-section">
          <Link key={videoResult.id} to={`/video/${videoResult.id.videoId}`}>
@@ -17,7 +27,7 @@ export default function YoutubeSearchVideoContain({ videoResult }) {
                   <div className="youtube-search-video-container-timer">
                      <p className="youtube-search-video-container-timer-text">
                         {moment
-                           .utc(moment.duration("PT10M45S").asSeconds() * 1000)
+                           .utc(moment.duration(isVideoDuration).asSeconds() * 1000)
                            .format("HH:mm:ss")}
                      </p>
                   </div>
@@ -40,7 +50,7 @@ export default function YoutubeSearchVideoContain({ videoResult }) {
                      person
                   </span> */}
                   <span className="youtube-search-video-container-details-channel-icon">
-                     <img src={videoResult.channelImage.high.url} alt="yt-channel-logo" />
+                     <img src={isChannelLogo} alt="logo" />
                   </span>
                   <p className="youtube-search-video-container-details-channel-name">
                      {videoResult.snippet.channelTitle}
