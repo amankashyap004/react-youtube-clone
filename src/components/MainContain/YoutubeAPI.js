@@ -15,7 +15,7 @@ export default function YoutubeAPI() {
    // };
    const [nextPage, setNextPage] = React.useState("");
    const videoHTTP = "https://www.googleapis.com/youtube/v3/videos?";
-   const fetchUrl = `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=3&regionCode=IN&pageToken=${nextPage}`;
+   const fetchUrl = `${videoHTTP}key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=IN&pageToken=${nextPage}`;
    const [apiAllData, setApiAllData] = React.useState([]);
 
    const getPopularVideos = () => {
@@ -37,11 +37,11 @@ export default function YoutubeAPI() {
    }, []);
 
    const handleClickNextPage = () => {
-      console.log(nextPage);
+      // console.log(nextPage);
       getPopularVideos();
    };
 
-   console.log(apiAllData);
+   // console.log(apiAllData);
    // const getVideos = () => {
    //    setApiAllData({ moreResult: nextPage + 10 });
    //    fetch(fetchUrl)

@@ -78,6 +78,25 @@
 }
 
 .video-container-details-left {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+
+.video-container-details-left-channel-logo {
+   width: 40px;
+   border-radius: 50%;
+   cursor: pointer;
+   background-color: #303030;
+   margin-right: 0.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.video-container-details-left-channel-logo > img {
+   border-radius: 50%;
+   width: 100%;
 }
 
 .video-container-details-right {
